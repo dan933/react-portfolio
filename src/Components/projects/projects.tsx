@@ -13,6 +13,14 @@ function Projects() {
         <h1>hi</h1>
         <h1>hi</h1>
       </Parallax>
+      <Parallax translateX={[0, 95]}>
+        <h1>hi</h1>
+        <h1>hi</h1>
+        <h1>hi</h1>
+        <h1>hi</h1>
+        <h1>hi</h1>
+        <h1>hi</h1>
+      </Parallax>
       
     </div>
   )
