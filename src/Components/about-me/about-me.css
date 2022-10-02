@@ -1,0 +1,49 @@
+.arrow {
+    box-sizing: border-box;
+    height: 5vw;
+    width: 5vw;
+    max-width: 90vw;
+    border-style: solid;
+    border-color: black;
+    border-width: 0px 1px 1px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+  }
+
+  #arrow-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 13px;
+  }
+
+  #arrow-container:hover{
+    font-weight: bolder;
+  }
+  
+  #arrow-container:hover .arrow{
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+  }
+  
+
+  .about-me-container{
+    padding-top: 15px;
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+
+  }
+
+  #profile-picture{
+    width: 200px;
+    max-width:90vw;
+    border-radius:50%;
+  }
+
+  #profile-card{
+    width: 300px;
+    max-width: 90vw;
+  }
