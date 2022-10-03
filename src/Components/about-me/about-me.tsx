@@ -5,12 +5,10 @@ function AboutMe() {
   return (
       <div className="about-me-container">
           <div id='profile-card'>
-            <img id='profile-picture' src="https://www.pngitem.com/pimgs/m/99-998739_dale-engen-person-placeholder-hd-png-download.png" alt="" />
-            <h1>John Doe</h1>
+            <img id='profile-picture' src="https://media-exp1.licdn.com/dms/image/C5103AQEaR53PARTl4A/profile-displayphoto-shrink_800_800/0/1583023980117?e=1665619200&v=beta&t=mxXlrOARz1goda9-Z7odVNyXiuAJxoE-WO2S3JcS_To" alt="" />
+            <h1>Daniel Albert</h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Incidunt, vel? At autem dolor dignissimos,
-                pariatur voluptates earum aut ipsam nesciunt adipisci tempora officia fugiat modi dicta quo nostrum illum culpa!
+                I'm a developer, interested in solving problems through code.
             </p>
       </div>
       {
@@ -18,7 +16,6 @@ function AboutMe() {
       }
       <div id='arrow-container'>
         <div className="arrow"></div>
-        <span>scroll</span>
       </div>
       </div>
   )
