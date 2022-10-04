@@ -1,10 +1,9 @@
-import React, { CSSProperties } from 'react'
 import './projects.css'
 import { Parallax } from 'react-scroll-parallax';
 import { CardHeader, CardContent, Typography } from '@mui/material';
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
-import { Box, maxHeight } from '@mui/system';
+import { Box } from '@mui/system';
 
 function Projects() {
 
@@ -56,8 +55,9 @@ function Projects() {
             maxWidth: '80vw',
             width: '400px',
             mb: 2,
-          maxHeight: '80vh',
-            overflow:'auto'
+            maxHeight: '80vh',
+            overflowX:'hidden',
+            overflowY:'auto'
           }}
         >
           {cardExample}
