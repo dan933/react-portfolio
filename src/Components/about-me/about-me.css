@@ -19,6 +19,7 @@
 
   #arrow-container:hover{
     font-weight: bolder;
+    cursor: pointer;
   }
   
   #arrow-container:hover .arrow{
