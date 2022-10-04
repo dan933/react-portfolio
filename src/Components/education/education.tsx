@@ -1,6 +1,7 @@
 import { Box, Paper } from '@mui/material'
 import { Typography } from '@mui/material';
 import React, { CSSProperties } from 'react';
+import './education.css'
 
 function Education() {
   const dipOfITBulletPoint = [
@@ -8,8 +9,9 @@ function Education() {
     'Created a CICD pipelines for the project using Azure pipeline',
     'Collaborated with other developers using azure boards',
     'In the process of creating an admin dashboard for an organisation with DGI status',
-    'Created a full stack application using React'].map(bullet => (
+    'Created a full stack application using React'].map((bullet,index) => (
       <li
+        key={index}
         style={{marginBottom:'5px'}}
       >{bullet}</li>)
   )
@@ -19,32 +21,19 @@ function Education() {
     'Developed and deployed two fullstack applications using AWS cloud services',
     'Utilised Jira project management software',
     'Collaborated with other developers on GitHub'
-  ].map(bullet => (<li style={{marginBottom:'5px'}}>{bullet}</li>))
+  ].map((bullet,index) => (<li key={index} style={{marginBottom:'5px'}}>{bullet}</li>))
 
 
   return (
     <Box
-    sx={{
-      display: 'flex',
-      alignItems:'center',
-      flexDirection: 'column',
-    }}
+      className='education-container'
     >
 
       <Paper
       elevation={3}
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        flexWrap:'wrap',
-        padding: '15px',
-        marginBottom:'10px',
-        maxWidth:'80vw',
-        width: '600px',
-        overflow:'auto'
-      }}
+      className='education-paper'
       >
-          <Typography
+        <Typography
           sx={{
             fontSize:'1rem',
             fontWeight:'bold'
@@ -58,14 +47,8 @@ function Education() {
           >
               Diploma of Information Technology (Advanced Programming)
           </Typography>
-          <Box
-          sx={{
-            display: 'flex',
-            flexWrap:'wrap',
-            justifyContent: 'space-between',
-            fontSize:'0.9rem',
-            color: 'gray'
-            }}
+        <Box
+          className='subheading'
           >
           <Typography
             marginBottom={'3px'}
@@ -84,14 +67,8 @@ function Education() {
             Associate Degree of Applied Technology (Cloud Computing) – part time
           </Typography>
           <Box
-            sx={{
-              display: 'flex',
-              flexWrap:'wrap',
-              justifyContent: 'space-between',
-              fontSize:'0.9rem',
-              color: 'gray'
-              }}
-            >
+            className='subheading'
+          >
             <Typography
               marginBottom={'3px'}
             >Swinburne University of Technology</Typography>
@@ -116,13 +93,7 @@ function Education() {
             Diploma of Accounting 
         </Typography>
         <Box
-        sx={{
-          display: 'flex',
-          flexWrap:'wrap',
-          justifyContent: 'space-between',
-          fontSize:'0.9rem',
-          color: 'gray'
-          }}
+        className='subheading'
         >
         <Typography
           sx={{marginBottom:'10px'}}

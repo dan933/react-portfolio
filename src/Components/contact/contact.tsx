@@ -1,12 +1,14 @@
 import React, { CSSProperties } from 'react'
 import { Box, Paper } from '@mui/material';
-import './contactStyles.css'
+import './contact.css'
+
 function Contact() {
     return (
         <Box
             width={'100vw'}
             justifyContent={'center'}
             display={'flex'}
+            overflow={'auto'}
         >
             <Paper
                 elevation={3}

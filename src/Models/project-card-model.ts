@@ -7,6 +7,7 @@ export interface IProjectCard{
     youtubeLink?: string;
     sourceCode?: string;
     description?: string;
+    demoURL?: string;
     IsGitHubButton: boolean;
     IsDemoButton?: boolean;
 }

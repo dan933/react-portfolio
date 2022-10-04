@@ -1,8 +1,18 @@
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden;
+}
+
 .projects-container{
-    max-width: 500px;
-    height: 80vh;
-    width: 80vw;
-    overflow: auto;
+    max-width: 80vw;
+    width: 500px;
+    margin-bottom: 10px;
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .card{

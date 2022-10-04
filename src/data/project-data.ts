@@ -9,7 +9,7 @@ export const CardData: IProjectCard[] = [
     'A full stack application users can login create and manage their NBA dream teams.',
     gitHubLink: 'https://github.com/dan933/2022-NBA-Prediction-Application',
     description:'A full stack application created with: React for the frontend, .NET for the API, Auth0 for authentication, SQL server for the database and azure piplines for CI/CD. This was a group project, collaboration was done through github. A user could login create an NBA dream team by adding or removing players from a team, a user was then able to compare two teams to see which team had a better win percentage.',
-    youtubeLink:'https://www.youtube.com/embed/ltSpzfQ_b0k',
+    youtubeLink: 'https://www.youtube.com/embed/ltSpzfQ_b0k',
     IsGitHubButton: true,
   },
   {
@@ -18,7 +18,8 @@ export const CardData: IProjectCard[] = [
     img: 'rideshare.gif',
     caption:
       'A shiny app used to identify profitable areas and times for rideshare drivers.  The app was created with R programming language, leaflet and Shiny.',
-    description:'This application is designed to find the most profitable location for rideshare driving. Based on a drivers previous rideshare history. It reads an excel file with trip details. The income from each trip is grouped by day, time and suburb using an aggregate function. The longatude and latitude of each suburb is found by searching a csv file for a suburb match, in order for leaflet to use for markers. The markers are coloured using a colour pallet the darker the colour the more profitable the location at that time and date.',
+    description: 'This application is designed to find the most profitable location for rideshare driving. Based on a drivers previous rideshare history. It reads an excel file with trip details. The income from each trip is grouped by day, time and suburb using an aggregate function. The longatude and latitude of each suburb is found by searching a csv file for a suburb match, in order for leaflet to use for markers. The markers are coloured using a colour pallet the darker the colour the more profitable the location at that time and date.',
+    demoURL:'https://daniel-albert.shinyapps.io/Rideshare-project',
     IsGitHubButton: false,
     IsDemoButton: true,
   },

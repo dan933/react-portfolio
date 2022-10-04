@@ -5,18 +5,20 @@ import Projects from './Components/projects/projects';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Education from './Components/education/education';
 import { Box } from '@mui/material';
+import Contact from './Components/contact/contact';
 
 function App() {
   return (
     <ParallaxProvider>
       <Box
       sx={{
-        overflowX:'hidden'
+          overflowX: 'hidden',
       }}
       >
         <AboutMe />
         <Projects />
-        <Education/>
+        <Education />
+        <Contact/>
       </Box>
     </ParallaxProvider>
   );
