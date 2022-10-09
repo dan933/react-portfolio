@@ -1,11 +1,11 @@
-.button-container{
+.action-container{
     display: flex;
     column-gap: 5px;
     row-gap: 5px;
 }
 
 @media only screen and (max-width: 319px) {
-    .button-container {
+    .action-container {
         flex-direction: column;
     }
   }

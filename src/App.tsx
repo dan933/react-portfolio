@@ -9,7 +9,6 @@ import Contact from './Components/contact/contact';
 
 function App() {
   return (
-    <ParallaxProvider>
       <Box
       sx={{
           overflowX: 'hidden',
@@ -20,7 +19,6 @@ function App() {
         <Education />
         <Contact/>
       </Box>
-    </ParallaxProvider>
   );
 }
 

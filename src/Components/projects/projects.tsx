@@ -1,11 +1,9 @@
 import './projects.css'
-import { Parallax } from 'react-scroll-parallax';
 import { Box } from '@mui/system';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CardData } from '../../data/project-data';
 import ProjectCard from './project-card';
-import { IProjectCard } from '../../Models/project-card-model';
-import { Tab, Tabs, Typography } from '@mui/material';
+import { FormControlLabel, Slide, Switch, Tab, Tabs, Typography } from '@mui/material';
 
 
 function Projects() {
@@ -39,34 +37,23 @@ function Projects() {
       >
         {tabValue === index && (
           <Box sx={{ p: 3 }}>
-            <Typography>{children}</Typography>
+            <div>{children}</div>
           </Box>
         )}
       </div>
     );
   }
   
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
     setTabValue(newValue);
   };
 
-  const handleChangeIndex = (index: number) => {
-    setTabValue(index);
-  };
-
-  const cardProjects = CardData.map((card: IProjectCard, index) => (
-      <ProjectCard
-        key={index}
-        card={card}
-      />
-  ))
-
   const tabs = CardData.map((card,index) => (
-    <Tab label={card.title} {...a11yProps(index)}></Tab>
+    <Tab label={card.title} key={index} {...a11yProps(index)}></Tab>
   ))
 
   const tabPanel = CardData.map((card, index) => (
-    <TabPanel tabValue={tabValue} index={index}>
+    <TabPanel tabValue={tabValue} key={index} index={index}>
       <ProjectCard
         key={index}
         card={card}
@@ -74,37 +61,63 @@ function Projects() {
    </TabPanel> 
   ))
 
+  const [slideChecked, setSlideChecked] = React.useState(false);
+
+  const handleSlideChange = () => {
+
+    if (!slideChecked) {
+      setSlideChecked(true);      
+    }    
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 250 && !slideChecked) {
+        handleSlideChange()
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);  
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const projectTabsElement = (
+    <Box
+          className='projects-container'
+    >
+            <h1>Projects</h1>
+      <Tabs
+        allowScrollButtonsMobile={true}
+        value={tabValue}
+        onChange={handleTabChange}
+        indicatorColor="secondary"
+        textColor="inherit"
+        aria-label="full width tabs example"
+        scrollButtons="auto"
+        variant="scrollable"
+      >
+        {tabs}
+      </Tabs>
+      {tabPanel}
+      </Box>
+  )
+
   
   return (
     <Box
       className='container'
     >
-      <Parallax
-        translateX={['-100%', '0%']}
-        startScroll={100}
-        endScroll={500}
-      >
-        <h1>Projects</h1>
-        <Box
-          className='projects-container'
-        >
-            <Tabs
-              value={tabValue}
-              onChange={handleChange}
-              indicatorColor="secondary"
-              textColor="inherit"
-              aria-label="full width tabs example"
-              scrollButtons="auto"
-              variant="scrollable"
-            >
-              {tabs}
-            </Tabs>
-            {tabPanel}
-        </Box>
-
-
-
-      </Parallax>
+        
+        {/* <FormControlLabel
+          control={<Switch checked={slideChecked} onChange={handleSlideChange} />}
+          label="Show"
+        /> */}
+        <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
+          {projectTabsElement}
+        </Slide>
     </Box>
   )
 }

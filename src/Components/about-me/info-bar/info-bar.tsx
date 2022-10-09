@@ -8,9 +8,10 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 function InfoBar() {
   return (
     <Box
+      className='button-container'
     >
       <Button
-        sx={{margin:'10px'}}
+        className='buttons'
         variant="outlined"
         href='CV-Daniel-Albert.pdf'
         download={'CV-Daniel-Albert.pdf'}
@@ -20,7 +21,7 @@ function InfoBar() {
         /> CV
       </Button>
       <Button
-        sx={{ margin: '10px' }}
+        className='buttons'
         variant="outlined"
         href="mailto:danielalbert3377@gmail.com"
       >
@@ -29,6 +30,7 @@ function InfoBar() {
         /> Email
       </Button>
       <Button
+        className='buttons'
         variant="outlined"
         href='https://github.com/dan933'
         target="blank"

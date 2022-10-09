@@ -8,11 +8,8 @@
 
 .projects-container{
     max-width: 80vw;
-    width: 500px;
+    width: 600px;
     margin-bottom: 10px;
-    max-height: 80vh;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .card{

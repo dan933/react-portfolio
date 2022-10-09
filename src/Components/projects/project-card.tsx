@@ -3,6 +3,7 @@ import React, { CSSProperties } from 'react'
 import { IProjectCard } from '../../Models/project-card-model'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { TransitionProps } from '@mui/material/transitions';
+import './project-card.css';
 
 
 const Transition = React.forwardRef(function Transition(
@@ -59,14 +60,18 @@ function ProjectCard(props: { key: number; card: IProjectCard; }) {
           overflow:'auto'
         }}
       >
-        <Typography>
+          <Typography
+            component={'span'} variant={'body2'}
+          >
           {props.card.caption}
         </Typography>
         </CardContent>
-        <CardActions>
+        <CardActions
+          className='action-container'
+        >
           <Button
             size="small"
-            sx={{ backgroundColor: 'white', color: 'black' }}
+            sx={{ backgroundColor: 'white', color: 'black', minWidth:'100px' }}
             variant="outlined"
             onClick={handleDialog}
           >{props.card.IsDemoButton ? "Demo" : "Video"}</Button>
