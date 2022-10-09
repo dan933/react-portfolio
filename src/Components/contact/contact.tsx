@@ -12,11 +12,16 @@ function Contact() {
         setSlideChecked(true);      
         }    
     };
-
     useEffect(() => {
         const handleScroll = () => {
             console.log(window.scrollY)
-          if (window.scrollY >= 1456 && !slideChecked) {
+          if (window.scrollY >= 2313 && window.screen.width <= 280 && !slideChecked) {
+            handleSlideChange()
+          }else
+          if (window.scrollY >= 1456 && window.screen.width >= 480 && !slideChecked) {
+            handleSlideChange()
+          } else
+          if (window.scrollY >= 1835 && window.screen.width < 480 && !slideChecked) {
             handleSlideChange()
           }
         };
