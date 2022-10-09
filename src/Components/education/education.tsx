@@ -35,7 +35,6 @@ function Education() {
   };
 
   useEffect(() => {
-    console.log(window.scrollY)
     const handleScroll = () => {
       if (window.scrollY >= 1100 && !slideChecked) {
         handleSlideChange()

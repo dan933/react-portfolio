@@ -14,7 +14,6 @@ function Contact() {
     };
     useEffect(() => {
         const handleScroll = () => {
-            console.log(window.scrollY)
           if (window.scrollY >= 2313 && window.screen.width <= 280 && !slideChecked) {
             handleSlideChange()
           }else
