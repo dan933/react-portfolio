@@ -3,7 +3,7 @@ import { Box } from '@mui/system';
 import React, { useEffect } from 'react';
 import { CardData } from '../../data/project-data';
 import ProjectCard from './project-card';
-import { FormControlLabel, Slide, Switch, Tab, Tabs, Typography } from '@mui/material';
+import { Slide, Tab, Tabs } from '@mui/material';
 
 
 function Projects() {
@@ -72,7 +72,7 @@ function Projects() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 250 && !slideChecked) {
+      if (window.scrollY >= 200 && !slideChecked) {
         handleSlideChange()
       }
     };
@@ -102,6 +102,16 @@ function Projects() {
         {tabs}
       </Tabs>
       {tabPanel}
+      <Box
+        display={'flex'}
+        justifyContent={'center'}
+      >
+        <Box
+          className="arrow"
+          sx={{ display: { xs: 'none', sm: 'block', md: 'block' } }}
+        
+        ></Box>
+      </Box>
       </Box>
   )
 
@@ -115,9 +125,11 @@ function Projects() {
           control={<Switch checked={slideChecked} onChange={handleSlideChange} />}
           label="Show"
         /> */}
-        <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
+      <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
           {projectTabsElement}
-        </Slide>
+      </Slide>
+
+
     </Box>
   )
 }

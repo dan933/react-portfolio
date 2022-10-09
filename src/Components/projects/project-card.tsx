@@ -34,64 +34,64 @@ function ProjectCard(props: { key: number; card: IProjectCard; }) {
 
   return (
     <>
-      <Card
-      elevation={3}
-      sx={{
-        margin: '10px'
-      }}
-    >
-      <CardHeader
-        title={props.card.title}
-        subheader={props.card.subtitle}
-        />
-        <CardMedia
-          sx={{
-            cursor:'pointer'
-          }}
-          component = "img"
-          height="194"
-          onClick={handleDialog}
-          image={`ProjectImages/${props.card.img}`}
-          alt=""
-      />
-
-      <CardContent
+        <Card
+        elevation={3}
         sx={{
-          overflow:'auto'
+          margin: '10px'
         }}
       >
-          <Typography
-            component={'span'} variant={'body2'}
-          >
-          {props.card.caption}
-        </Typography>
-        </CardContent>
-        <CardActions
-          className='action-container'
-        >
-          <Button
-            size="small"
-            sx={{ backgroundColor: 'white', color: 'black', minWidth:'100px' }}
-            variant="outlined"
+        <CardHeader
+          title={props.card.title}
+          subheader={props.card.subtitle}
+          />
+          <CardMedia
+            sx={{
+              cursor:'pointer'
+            }}
+            component = "img"
+            height="194"
             onClick={handleDialog}
-          >{props.card.IsDemoButton ? "Demo" : "Video"}</Button>
-          {props.card.IsGitHubButton &&
-            <Button size="small"
-              sx={{
-                backgroundColor: 'white',
-                color: 'black',
-                marginLeft:'3px'
-              }}
-              variant="outlined"
-              href={`${props.card.gitHubLink}`}
-              target={'_blank'}
+            image={`ProjectImages/${props.card.img}`}
+            alt=""
+        />
+
+        <CardContent
+          sx={{
+            overflow:'auto'
+          }}
+        >
+            <Typography
+              component={'span'} variant={'body2'}
             >
-              <GitHubIcon/> &nbsp; GitHub
-          </Button>}
-        </CardActions>
-      
-      </Card>
-      
+            {props.card.caption}
+          </Typography>
+          </CardContent>
+          <CardActions
+            className='action-container'
+          >
+            <Button
+              size="small"
+              sx={{ backgroundColor: 'white', color: 'black', minWidth:'100px' }}
+              variant="outlined"
+              onClick={handleDialog}
+            >{props.card.IsDemoButton ? "Demo" : "Video"}</Button>
+            {props.card.IsGitHubButton &&
+              <Button size="small"
+                sx={{
+                  backgroundColor: 'white',
+                  color: 'black',
+                  marginLeft:'3px'
+                }}
+                variant="outlined"
+                href={`${props.card.gitHubLink}`}
+                target={'_blank'}
+              >
+                <GitHubIcon/> &nbsp; GitHub
+            </Button>}
+          </CardActions>
+        
+        </Card>
+
       <Dialog
         open={openDialog}
         TransitionComponent={Transition}
@@ -131,8 +131,7 @@ function ProjectCard(props: { key: number; card: IProjectCard; }) {
             variant="outlined"
           >Close</Button>
       </DialogActions>
-      </Dialog>
-    
+      </Dialog>    
     </>
   )
 }

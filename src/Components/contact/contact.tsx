@@ -18,10 +18,10 @@ function Contact() {
           if (window.scrollY >= 2313 && window.screen.width <= 280 && !slideChecked) {
             handleSlideChange()
           }else
-          if (window.scrollY >= 1456 && window.screen.width >= 480 && !slideChecked) {
+          if (window.scrollY >= 1889 && window.screen.width >= 480 && !slideChecked) {
             handleSlideChange()
           } else
-          if (window.scrollY >= 1835 && window.screen.width < 480 && !slideChecked) {
+          if (window.scrollY >= 2100 && window.screen.width < 480 && !slideChecked) {
             handleSlideChange()
           }
         };

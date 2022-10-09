@@ -24,7 +24,9 @@ function AboutMe() {
         {
           //source https://codepen.io/pjwiebe/pen/VmmxpM
         }
-      <Box id='arrow-container'>
+      <Box
+        sx={{ display: { xs: 'none', sm: 'block', md: 'block' } }}
+      >
         <Box className="arrow"></Box>
       </Box>
     </Box>
