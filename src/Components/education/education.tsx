@@ -2,6 +2,7 @@ import { Box, Paper, Slide } from '@mui/material'
 import { Typography } from '@mui/material';
 import React, { CSSProperties, useEffect } from 'react';
 import './education.css'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function Education() {
 
@@ -50,93 +51,102 @@ function Education() {
 
 
   return (
-
-    <Box
-      className='container'>
+    <Element
+      name="education"
+    >
+      <Box
+        className='container'>
+        
+        <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
+          <Box
+            className='education-container'
+          >
       
-      <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
-        <Box
-          className='education-container'
-        >
-    
-          <Box>
-            <h1>Education</h1>
-            <Paper
-            elevation={3}
-            className='education-paper'
-            >
-                <Typography
-                sx={{
-                  fontSize:'1rem',
-                  fontWeight:'bold'
-                }}
-                >
-                    Diploma of Information Technology (Advanced Programming)
-                </Typography>
-              <Box
-                className='subheading'
-                >
-                <Typography
-                  marginBottom={'3px'}
-                >Swinburne University of Technology</Typography>
-                  <Typography>2022 – In progress</Typography>
-                </Box>
-                <ul>
-                  {dipOfITBulletPoint}
-                </ul>
-                <Typography
-                sx={{
-                  fontSize:'1rem',
-                  fontWeight:'bold'
-                }}
-                >
-                  Associate Degree of Applied Technology (Cloud Computing) – part time
-                </Typography>
+            <Box>
+              <h1>Education</h1>
+              <Paper
+              elevation={3}
+              className='education-paper'
+              >
+                  <Typography
+                  sx={{
+                    fontSize:'1rem',
+                    fontWeight:'bold'
+                  }}
+                  >
+                      Diploma of Information Technology (Advanced Programming)
+                  </Typography>
                 <Box
                   className='subheading'
-                >
+                  >
                   <Typography
                     marginBottom={'3px'}
                   >Swinburne University of Technology</Typography>
-                    <Typography>2020 - 2021</Typography>
-                </Box>
+                    <Typography>2022 – In progress</Typography>
+                  </Box>
+                  <ul>
+                    {dipOfITBulletPoint}
+                  </ul>
+                  <Typography
+                  sx={{
+                    fontSize:'1rem',
+                    fontWeight:'bold'
+                  }}
+                  >
+                    Associate Degree of Applied Technology (Cloud Computing) – part time
+                  </Typography>
+                  <Box
+                    className='subheading'
+                  >
+                    <Typography
+                      marginBottom={'3px'}
+                    >Swinburne University of Technology</Typography>
+                      <Typography>2020 - 2021</Typography>
+                  </Box>
+                  <Typography
+                    marginBottom={'3px'}
+                    color={'gray'}
+                  >
+                    Unfortunately, this course was discontinued however I achieved the following: 
+      
+                  </Typography>
+                  <ul>
+                    {associateDegreeBulletPoint}
+                </ul>
                 <Typography
-                  marginBottom={'3px'}
-                  color={'gray'}
-                >
-                  Unfortunately, this course was discontinued however I achieved the following: 
-    
+                  sx={{
+                    fontSize:'1rem',
+                    fontWeight:'bold'
+                  }}
+                  >
+                    Diploma of Accounting 
                 </Typography>
-                <ul>
-                  {associateDegreeBulletPoint}
-              </ul>
-              <Typography
-                sx={{
-                  fontSize:'1rem',
-                  fontWeight:'bold'
-                }}
+                <Box
+                className='subheading'
                 >
-                  Diploma of Accounting 
-              </Typography>
-              <Box
-              className='subheading'
-              >
-              <Typography
-                sx={{marginBottom:'10px'}}
-              >Swinburne University of Technology</Typography>
-                <Typography>2020</Typography>
-              </Box>
-            </Paper>    
+                <Typography
+                  sx={{marginBottom:'10px'}}
+                >Swinburne University of Technology</Typography>
+                  <Typography>2020</Typography>
+                </Box>
+              </Paper>    
+            </Box>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true} 
+              smooth={true}
+              offset={20}
+              duration={500}
+            >
+              <Box className="arrow"></Box>
+            </Link>
+      
           </Box>
-          <Box
-            className="arrow"
-            sx={{ display: { xs: 'none', sm: 'block', md: 'block' } }}
-          ></Box>
-    
-        </Box>
-      </Slide>
+        </Slide>
 
-    </Box>
+      </Box>
+    </Element>
 
   )
 }

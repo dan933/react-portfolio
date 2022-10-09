@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { CardData } from '../../data/project-data';
 import ProjectCard from './project-card';
 import { Slide, Tab, Tabs } from '@mui/material';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 
 function Projects() {
@@ -106,31 +107,41 @@ function Projects() {
         display={'flex'}
         justifyContent={'center'}
       >
-        <Box
-          className="arrow"
-          sx={{ display: { xs: 'none', sm: 'block', md: 'block' } }}
-        
-        ></Box>
+       <Link
+          activeClass="active"
+          to="education"
+          spy={true} 
+          smooth={true}
+          offset={20}
+          duration={500}
+        >
+          <Box className="arrow"></Box>
+        </Link>
       </Box>
       </Box>
   )
 
   
   return (
-    <Box
-      className='container'
+    <Element
+    name="projects"
     >
-        
-        {/* <FormControlLabel
-          control={<Switch checked={slideChecked} onChange={handleSlideChange} />}
-          label="Show"
-        /> */}
-      <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
-          {projectTabsElement}
-      </Slide>
+      <Box
+        className='container'
+      >
+          
+          {/* <FormControlLabel
+            control={<Switch checked={slideChecked} onChange={handleSlideChange} />}
+            label="Show"
+          /> */}
+        <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
+            {projectTabsElement}
+        </Slide>
 
 
-    </Box>
+      </Box>
+
+    </Element>
   )
 }
 

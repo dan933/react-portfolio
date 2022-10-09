@@ -14,7 +14,7 @@ function App() {
           overflowX: 'hidden',
       }}
       >
-        <AboutMe />
+        <AboutMe/>
         <Projects />
         <Education />
         <Contact/>

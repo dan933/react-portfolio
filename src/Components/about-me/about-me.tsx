@@ -2,6 +2,7 @@ import { Box } from '@mui/material'
 import React from 'react'
 import './about-me.css'
 import InfoBar from './info-bar/info-bar'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function AboutMe() {
   return (
@@ -27,7 +28,16 @@ function AboutMe() {
       <Box
         sx={{ display: { xs: 'none', sm: 'block', md: 'block' } }}
       >
-        <Box className="arrow"></Box>
+        <Link
+          activeClass="active"
+          to="projects"
+          spy={true} 
+          smooth={true}
+          offset={20}
+          duration={500}
+        >
+          <Box className="arrow"></Box>
+        </Link>
       </Box>
     </Box>
   )

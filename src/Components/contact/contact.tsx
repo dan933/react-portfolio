@@ -1,6 +1,7 @@
 import React, { CSSProperties, useEffect } from 'react'
 import { Box, Paper, Slide } from '@mui/material';
 import './contact.css'
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function Contact() {
 
@@ -12,7 +13,8 @@ function Contact() {
         setSlideChecked(true);      
         }    
     };
-    useEffect(() => {
+  useEffect(() => {
+        console.log(window.scrollY)
         const handleScroll = () => {
           if (window.scrollY >= 2313 && window.screen.width <= 280 && !slideChecked) {
             handleSlideChange()
@@ -35,7 +37,9 @@ function Contact() {
 
 
     return (
-        <>
+      <Element
+        name='contact'
+      >
             <Box
                 className='contact-container'
             >
@@ -55,7 +59,7 @@ function Contact() {
                     </Box>
                 </Slide>
             </Box>
-        </>
+        </Element>
   )
 }
 
