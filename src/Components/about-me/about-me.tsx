@@ -33,7 +33,7 @@ function AboutMe() {
           to="projects"
           spy={true} 
           smooth={true}
-          offset={20}
+          offset={-30}
           duration={500}
         >
           <Box className="arrow"></Box>

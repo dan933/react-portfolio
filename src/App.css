@@ -1,5 +1,6 @@
 .arrow {
     box-sizing: border-box;
+    margin-bottom:10px;
     height: 5vw;
     width: 5vw;
     max-height: 50px;
