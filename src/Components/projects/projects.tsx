@@ -54,30 +54,6 @@ function Projects() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  // const projectTabsElement = (
-  //   <Box
-  //         className='projects-container'
-  //   >
-  //           <h1>Projects</h1>
-  //     <Box
-  //       display={'flex'}
-  //       justifyContent={'center'}
-  //     >
-  //      <Link
-  //         activeClass="active"
-  //         to="education"
-  //         spy={true} 
-  //         smooth={true}
-  //         offset={20}
-  //         duration={500}
-  //       >
-  //         <Box className="arrow"></Box>
-  //       </Link>
-  //     </Box>
-  //   </Box>
-  // )
-
   
   return (
 
