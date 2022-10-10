@@ -6,6 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import Education from './Components/education/education';
 import { Box } from '@mui/material';
 import Contact from './Components/contact/contact';
+import NavBar from './Components/nav-bar/nav-bar';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       sx={{
           overflowX: 'hidden',
       }}
-      >
+    >
+        <NavBar/>
         <AboutMe/>
         <Projects />
         <Education />
