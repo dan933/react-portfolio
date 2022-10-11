@@ -1,13 +1,20 @@
 import React from 'react'
-import { Toolbar } from '@mui/material';
+import { Button, Toolbar } from '@mui/material';
 import './nav-bar.css'
+
+
+
+//Source https://codesandbox.io/s/2m8hfv?file=/demo.tsx
 
 function NavBar() {
   return (
       <Toolbar
           className='nav-bar'
       >
-          <h1>Nav</h1>
+          <Button variant="text">About Me</Button>
+          <Button variant="text">Projects</Button>
+          <Button variant="text">Education</Button>
+          <Button variant="text">Contact</Button>
     </Toolbar>
   )
 }
