@@ -36,9 +36,11 @@ function Projects() {
   }, []);
   
   return (   
-        <Box
+        <div
           className='container'
-        >
+    >
+          <div className='spacer'>
+          </div>
           <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
             <div
               className='projects-container'
@@ -46,7 +48,7 @@ function Projects() {
               <TabsSection />
             </div>
           </Slide>
-        </Box>
+        </div>
 
   )
 }

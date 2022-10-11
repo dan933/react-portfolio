@@ -18,14 +18,7 @@ function Education() {
 
   React.useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY)
-      if (window.scrollY >= 2313 && window.screen.width <= 280 && !slideChecked) {
-        handleSlideChange()
-      }else
-      if (window.scrollY >= 1200 && window.screen.width >= 480 && !slideChecked) {
-        handleSlideChange()
-      } else
-      if (window.scrollY >= 1900 && window.screen.width < 480 && !slideChecked) {
+      if (window.scrollY >= 1220 && !slideChecked) {
         handleSlideChange()
       }
     };
@@ -60,9 +53,11 @@ function Education() {
 
   return (
     <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
-      <Box
+      <div
         className='education-container'
       >
+        <div className='spacer'>
+        </div>
         <Paper
         elevation={3}
         className='education-paper'
@@ -135,7 +130,7 @@ function Education() {
             <Typography>2020</Typography>
           </Box>
         </Paper>
-      </Box>
+      </div>
     </Slide>
   )
 }

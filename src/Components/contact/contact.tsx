@@ -16,13 +16,7 @@ function Contact() {
   useEffect(() => {
         const handleScroll = () => {
           console.log(window.scrollY)
-          if (window.scrollY >= 2313 && window.screen.width <= 280 && !slideChecked) {
-            handleSlideChange()
-          }else
-          if (window.scrollY >= 1900 && window.screen.width >= 480 && !slideChecked) {
-            handleSlideChange()
-          } else
-          if (window.scrollY >= 1900 && window.screen.width < 480 && !slideChecked) {
+          if (window.scrollY >= 1685 && !slideChecked) {
             handleSlideChange()
           }
         };
@@ -37,16 +31,18 @@ function Contact() {
 
 
   return (
-    <Box
+    <div
         className='contact-container'
     >
+        <div className='spacer'>
+        </div>
         <Slide 
           direction="right"
           in={slideChecked}
           mountOnEnter 
           unmountOnExit
-        >
-            <div>
+      >
+        <div>
                 <h1>Contact</h1>
                     <form
                     className='form-container'
@@ -60,7 +56,7 @@ function Contact() {
                     </form>
             </div>
         </Slide>
-    </Box>
+    </div>
   )
 }
 

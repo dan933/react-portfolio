@@ -17,3 +17,8 @@
     border-bottom-width: 4px;
     border-right-width: 4px;
   }
+
+  .spacer{
+    width: 100vw;
+    height: 70px;
+  }
