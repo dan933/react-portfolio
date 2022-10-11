@@ -73,7 +73,8 @@ function TabsSection(props:any) {
       };
 
     return (
-      <>
+      <Box
+      sx={{maxWidth:'100vw'}}>
         <Tabs
         allowScrollButtonsMobile={true}
         value={tabValue}
@@ -87,7 +88,7 @@ function TabsSection(props:any) {
         {tabs}
         </Tabs>
         {tabPanel}
-      </>
+      </Box>
   )
 }
 

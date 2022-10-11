@@ -11,27 +11,7 @@ import TabsSection from './tabs-section/tabs-section';
 
 
 function Projects() {
-
-  const [openDialog, setOpenDialog] = React.useState(false);
   
-  const [selectedCard, setSelectedCard] = React.useState<IProjectCard>({
-    title: "",
-    subtitle: "",
-    img: "",
-    caption: "",
-    gitHubLink: "",
-    youtubeLink: "",
-    sourceCode: "",
-    description: "",
-    demoURL: "",
-    IsGitHubButton: false,
-    IsDemoButton: false
-  });
-
-  const handleDialog = () => {
-    setOpenDialog(prev => !prev);
-  };
-
   const [slideChecked, setSlideChecked] = React.useState(false);
 
   const handleSlideChange = () => {
@@ -43,7 +23,7 @@ function Projects() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 200 && !slideChecked) {
+      if (window.scrollY >= 400 && !slideChecked) {
         handleSlideChange()
       }
     };
@@ -55,12 +35,7 @@ function Projects() {
     };
   }, []);
   
-  return (
-
-    <>
-      <Element
-        name="projects"
-      >
+  return (   
         <Box
           className='container'
         >
@@ -69,22 +44,10 @@ function Projects() {
               className='projects-container'
             >
               <TabsSection />
-            <Link
-              activeClass="active"
-              to="education"
-              spy={true} 
-              smooth={true}
-              offset={20}
-              duration={500}
-            >
-              <Box className="arrow"></Box>
-            </Link>
             </div>
           </Slide>
         </Box>
-      </Element>
-    
-    </>
+
   )
 }
 

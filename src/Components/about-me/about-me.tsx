@@ -6,41 +6,28 @@ import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scro
 
 function AboutMe() {
   return (
-    <Box className="about-me-container">
-      <Box
-        className='center-container'
-      >
-        <img id='profile-picture' src="https://media-exp1.licdn.com/dms/image/C5103AQEaR53PARTl4A/profile-displayphoto-shrink_800_800/0/1583023980117?e=1665619200&v=beta&t=mxXlrOARz1goda9-Z7odVNyXiuAJxoE-WO2S3JcS_To" alt="" />
-        <Box id='profile-card'>
-          <Box>
-          <p>
-          Hello 😊, my name is Daniel Albert I'm excited to show you some of the projects I have been working on.
-           I have worked with JavaScript frameworks such as React,
-           and Angular I have also created .Net and NodeJS APIs and integrated them into the front end.
-          </p>
 
-          </Box>
-        </Box>
-        <InfoBar/>
-      </Box>
-        {
-          //source https://codepen.io/pjwiebe/pen/VmmxpM
-        }
-      <Box
-        sx={{ display: { xs: 'none', sm: 'block', md: 'block' } }}
-      >
-        <Link
-          activeClass="active"
-          to="projects"
-          spy={true} 
-          smooth={true}
-          offset={-30}
-          duration={500}
+      <Element name='about' className="about-me-container">
+        <Box
+          className='center-container'
         >
-          <Box className="arrow"></Box>
-        </Link>
-      </Box>
-    </Box>
+          <img id='profile-picture' src="https://media-exp1.licdn.com/dms/image/C5103AQEaR53PARTl4A/profile-displayphoto-shrink_800_800/0/1583023980117?e=1665619200&v=beta&t=mxXlrOARz1goda9-Z7odVNyXiuAJxoE-WO2S3JcS_To" alt="" />
+          <Box id='profile-card'>
+            <Box>
+              <p>
+                Hello 😊, my name is Daniel Albert I'm excited to show you some of the projects I have been working on.
+                I have worked with JavaScript frameworks such as React,
+                and Angular I have also created .Net and NodeJS APIs and integrated them into the front end.
+              </p>
+            </Box>
+          </Box>
+          <InfoBar/>
+            {
+              //source https://codepen.io/pjwiebe/pen/VmmxpM
+            }
+
+        </Box>
+      </Element>
   )
 }
 

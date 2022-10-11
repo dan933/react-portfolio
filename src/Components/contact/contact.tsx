@@ -15,13 +15,14 @@ function Contact() {
     };
   useEffect(() => {
         const handleScroll = () => {
+          console.log(window.scrollY)
           if (window.scrollY >= 2313 && window.screen.width <= 280 && !slideChecked) {
             handleSlideChange()
           }else
-          if (window.scrollY >= 1889 && window.screen.width >= 480 && !slideChecked) {
+          if (window.scrollY >= 1900 && window.screen.width >= 480 && !slideChecked) {
             handleSlideChange()
           } else
-          if (window.scrollY >= 2100 && window.screen.width < 480 && !slideChecked) {
+          if (window.scrollY >= 1900 && window.screen.width < 480 && !slideChecked) {
             handleSlideChange()
           }
         };
@@ -35,30 +36,31 @@ function Contact() {
     
 
 
-    return (
-      <Element
-        name='contact'
-      >
-            <Box
-                className='contact-container'
-            >
-                <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
-                    <Box>
-                        <h1>Contact</h1>
-                            <form
-                            className='form-container'
-                            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc18dF3ds8TMYPu5o0nHkIRut7_KltJ4dU9DJniihW0jjbNmg/formResponse"
-                            method="post"
-                            >
-                            <input type="email" required placeholder="Email" name="entry.1888783603" className={'message-box'} ></input>
-                            <textarea name="entry.287121295" required rows={15} placeholder="enter message" className={'message-box'} id=""></textarea>
+  return (
+    <Box
+        className='contact-container'
+    >
+        <Slide 
+          direction="right"
+          in={slideChecked}
+          mountOnEnter 
+          unmountOnExit
+        >
+            <div>
+                <h1>Contact</h1>
+                    <form
+                    className='form-container'
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc18dF3ds8TMYPu5o0nHkIRut7_KltJ4dU9DJniihW0jjbNmg/formResponse"
+                    method="post"
+                    >
+                    <input type="email" required placeholder="Email" name="entry.1888783603" className={'message-box'} ></input>
+                    <textarea name="entry.287121295" required rows={15} placeholder="enter message" className={'message-box'} id=""></textarea>
 
-                            <button type="submit" className="submit-button">Submit</button>
-                            </form>
-                    </Box>
-                </Slide>
-            </Box>
-        </Element>
+                    <button type="submit" className="submit-button">Submit</button>
+                    </form>
+            </div>
+        </Slide>
+    </Box>
   )
 }
 
