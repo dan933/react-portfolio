@@ -61,6 +61,24 @@ function ProjectCard(props:any) {
             </Button>
           
           }
+
+          {
+            !props.card.IsDemoButton &&
+              <Button
+                  size="small"
+                  sx={{
+                    backgroundColor: 'white',
+                    color: 'black',
+                    marginLeft:'3px'
+                  }}
+                  variant="outlined"
+                  onClick={props.handleDialog}
+                  
+              >
+                  Video
+              </Button>
+
+          }
           
 
 
