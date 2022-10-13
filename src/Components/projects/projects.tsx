@@ -1,12 +1,6 @@
 import './projects.css'
-import { Box } from '@mui/system';
 import React, { useEffect } from 'react';
-import { CardData } from '../../data/project-data';
-import ProjectCard from './project-card';
-import { Slide, Tab, Tabs } from '@mui/material';
-import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-import { IProjectCard } from '../../Models/project-card-model';
-import ProjectDialog from './project-dialog/project-dialog';
+import { Slide } from '@mui/material';
 import TabsSection from './tabs-section/tabs-section';
 
 

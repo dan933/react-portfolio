@@ -15,73 +15,86 @@ function NavBar(props:any) {
     <Box 
       sx={{paddingBottom:'25px'}}
     >
+      
       <AppBar component="nav">
         <Toolbar
             className='nav-bar'
         >
           <Box
+            sx={{ display: { xs: 'none', sm: 'flex', alignItems:'center' } }}
           >
-            <Button
-              onClick={props.openDrawer}
-             sx={{ display: { xs: 'block', sm: 'none' } }}>
-              <MenuIcon/>
-            </Button>
+            <img src="./web-logo.png" alt="" style={{maxWidth:'4rem', padding:'8px', marginLeft:'auto'}} />
           </Box>
           <Box
-            sx={{ display: { xs: 'none', sm: 'block' } }}
+              sx={{ display: { xs: 'flex', sm: 'none', alignItems:'center' } }}
+            >
+              <Button
+                onClick={props.openDrawer}
+              > 
+                <MenuIcon/>
+              </Button>
+              <img src="./web-logo.png" alt="" style={{maxWidth:'4rem', padding:'8px'}} />
+          </Box>
+          <Box
+            className='nav-bar-container'
           >
-            <Link
-              activeClass="active"
-              to="about"
-              spy={true} 
-              smooth={true}
-              offset={-30}
-              duration={700}
+
+            <Box
+              sx={{ display: { xs: 'none', sm: 'flex', alignItems:'center' } }}
             >
-              <Button variant="text">
-                About Me
-              </Button>
-            </Link>
-
-            <Link
-              activeClass="active"
-              to="projects"
-              spy={true} 
-              smooth={true}
-              offset={0}
-              duration={700}
-            >
-              <Button variant="text">
-                Projects
-              </Button>
-            </Link>
-
-
-            <Link
-              activeClass="active"
-              to="education"
-              spy={true} 
-              smooth={true}
-              offset={0}
-              duration={700}
-            >
-              <Button variant="text">
-                Education
-              </Button>
-            </Link>
-
               <Link
-                  activeClass="active"
-                  to="contact"
-                  spy={true} 
-                  smooth={true}
-                  offset={0}
-                  duration={700}
+                activeClass="active"
+                to="about"
+                spy={true} 
+                smooth={true}
+                offset={-30}
+                duration={700}
               >
                 <Button variant="text">
-                  Contact
+                  About Me
                 </Button>
               </Link>
+
+              <Link
+                activeClass="active"
+                to="projects"
+                spy={true} 
+                smooth={true}
+                offset={0}
+                duration={700}
+              >
+                <Button variant="text">
+                  Projects
+                </Button>
+              </Link>
+
+
+              <Link
+                activeClass="active"
+                to="education"
+                spy={true} 
+                smooth={true}
+                offset={0}
+                duration={700}
+              >
+                <Button variant="text">
+                  Education
+                </Button>
+              </Link>
+
+                <Link
+                    activeClass="active"
+                    to="contact"
+                    spy={true} 
+                    smooth={true}
+                    offset={0}
+                    duration={700}
+                >
+                  <Button variant="text">
+                    Contact
+                  </Button>
+                </Link>
+            </Box>
           </Box>
         </Toolbar>
       </AppBar>

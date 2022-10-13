@@ -22,7 +22,7 @@ function ProjectDialog(props: any) {
 
 
     return (
-        <Dialog
+      <Dialog
         open={props.openDialog}
         TransitionComponent={Transition}
         keepMounted
