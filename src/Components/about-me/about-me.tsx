@@ -13,7 +13,7 @@ function AboutMe() {
       >
       <div className='spacer'>
       </div>
-      <img id='profile-picture' src="https://media-exp1.licdn.com/dms/image/C5103AQEaR53PARTl4A/profile-displayphoto-shrink_800_800/0/1583023980117?e=1665619200&v=beta&t=mxXlrOARz1goda9-Z7odVNyXiuAJxoE-WO2S3JcS_To" alt="" />
+      <img id='profile-picture' src="https://media-exp1.licdn.com/dms/image/C5103AQEaR53PARTl4A/profile-displayphoto-shrink_800_800/0/1583023980117?e=1671062400&v=beta&t=-nV6Rl1hxD4JWOg-tNw4pqXWhmijF5uftw15sgDGQnk" alt="" />
       <Box id='profile-card'>
         <Box>
           <p>
