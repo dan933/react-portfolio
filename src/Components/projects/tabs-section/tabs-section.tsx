@@ -60,11 +60,14 @@ function TabsSection(props:any) {
             key={index}
             card={card}
           />
-          <ProjectDialog
-            card={card}
-            handleDialog= {handleDialog}
-            openDialog= {openDialog}
-          />
+
+          {!card.IsDemoButton &&
+            <ProjectDialog
+              card={card}
+              handleDialog= {handleDialog}
+              openDialog= {openDialog}
+            />
+          }
        </TabPanel> 
       ))
     

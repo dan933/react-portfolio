@@ -41,13 +41,29 @@ function ProjectCard(props:any) {
           </CardContent>
           <CardActions
             className='action-container'
-          >
-          <Button
-              onClick={props.handleDialog}
-              size="small"
-              sx={{ backgroundColor: 'white', color: 'black', minWidth:'100px' }}
-              variant="outlined"
-            >{props.card.IsDemoButton ? "Demo" : "Video"}</Button>
+        >
+          
+          {
+            props.card.IsDemoButton &&
+            <Button
+                size="small"
+                sx={{
+                  backgroundColor: 'white',
+                  color: 'black',
+                  marginLeft:'3px'
+                }}
+                variant="outlined"
+                href={`${props.card.demoURL}`}
+                target={'_blank'}
+                
+            >
+                Demo
+            </Button>
+          
+          }
+          
+
+
             {props.card.IsGitHubButton &&
               <Button size="small"
                 sx={{
