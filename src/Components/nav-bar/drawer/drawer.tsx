@@ -36,6 +36,7 @@ function Drawer(props: Drawerprops) {
             smooth={true}
             offset={-10}
             duration={700}
+            onClick={() => props.setDrawer(prev => !prev)}
             className='drawerButton'
         >
             <ListItemButton            

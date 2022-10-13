@@ -1,49 +1,24 @@
 import './projects.css'
-import React, { useEffect } from 'react';
-import { Slide } from '@mui/material';
+import React from 'react';
 import TabsSection from './tabs-section/tabs-section';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 
-function Projects() {
-  
-  const [slideChecked, setSlideChecked] = React.useState(false);
-
-  const handleSlideChange = () => {
-
-    if (!slideChecked) {
-      setSlideChecked(true);      
-    }    
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 400 && !slideChecked) {
-        handleSlideChange()
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);  
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-  
-  return (   
-        <div
-          className='container'
-        >
-          <div className='spacer'>
-          </div>
-          <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
-            <div
-              className='projects-container'
-            >
-              <TabsSection />
-            </div>
-          </Slide>
+function Projects() {  
+  return (
+    <AnimationOnScroll animateIn="animate__fadeInLeft">
+      <div
+        className='container'
+      >
+        <div className='spacer'>
         </div>
-
+          <div
+            className='projects-container'
+          >
+            <TabsSection />
+          </div>
+      </div>
+    </AnimationOnScroll>
   )
 }
 

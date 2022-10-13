@@ -45,9 +45,12 @@ function App() {
 
       <Element
         name="contact"
-      >
+      >        
         <Contact />
       </Element>
+
+
+      
 
 
       <Drawer

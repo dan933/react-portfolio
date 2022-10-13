@@ -1,35 +1,10 @@
 import { Box, Paper, Slide } from '@mui/material'
 import { Typography } from '@mui/material';
-import React, { CSSProperties } from 'react';
-import {Element, animateScroll as scroll, scrollSpy, scroller, Link } from 'react-scroll'
-import './education.css'
+import React from 'react';
+import './education.css';
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Education() {
-
-  const [slideChecked, setSlideChecked] = React.useState(false);
-
-  const handleSlideChange = () => {
-
-      if (!slideChecked) {
-      setSlideChecked(true);      
-      }    
-  };
-
-
-  React.useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY >= 1220 && !slideChecked) {
-        handleSlideChange()
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);  
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
 
   const dipOfITBulletPoint = [
     'Developed and deployed two full stack applications using Azure cloud services',
@@ -52,7 +27,7 @@ function Education() {
 
 
   return (
-    <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
+    <AnimationOnScroll animateIn="animate__fadeInLeft">
       <div
         className='education-container'
       >
@@ -131,7 +106,8 @@ function Education() {
           </Box>
         </Paper>
       </div>
-    </Slide>
+
+    </AnimationOnScroll>
   )
 }
 
