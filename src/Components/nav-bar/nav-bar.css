@@ -6,18 +6,6 @@
     background-color: white;
 }
 
-.active{
-    background-color: #1976d2;
-    padding:5px;
-    font-weight: bold;
-    color: white;
-    border-radius: 5px;
-}
-
-.active > Button{
-    color: white;
-}
-
 
 @media screen and (max-width:600px) {
     .nav-bar{

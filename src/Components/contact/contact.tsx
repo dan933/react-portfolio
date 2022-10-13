@@ -14,9 +14,8 @@ function Contact() {
         }    
     };
   useEffect(() => {
-        const handleScroll = () => {
-          console.log(window.scrollY)
-          if (window.scrollY >= 1685 && !slideChecked) {
+    const handleScroll = () => {
+          if (window.scrollY >= 2040 && !slideChecked) {
             handleSlideChange()
           }
         };

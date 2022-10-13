@@ -18,3 +18,50 @@ code {
   flex-direction: column;
   overflow: auto;
 }
+
+.arrow {
+  box-sizing: border-box;
+  margin-bottom:10px;
+  height: 5vw;
+  width: 5vw;
+  max-height: 40px;
+  max-width: 40px;
+  border-style: solid;
+  border-color: black;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+}
+
+.arrow:hover{
+  cursor: pointer;
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.spacer{
+  width: 100vw;
+  height: 70px;
+}
+
+.active > Button{
+  color: white;
+  background-color: #1976d2;
+}
+
+.active > Button:hover{
+  background-color: #1976d2;
+}
+
+.active > .drawerButton{
+  background-color: #1976d2;
+}
+
+.active > .drawerButton{
+  background-color: #1976d2;
+  color: white;
+}
+.active > .drawerButton:hover{
+  background-color: #1976d2;
+  color: white;
+}

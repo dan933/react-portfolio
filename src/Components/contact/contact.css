@@ -1,5 +1,4 @@
 .contact-container{
-    padding-top:120px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -19,7 +18,7 @@
   .submit-button{
       background-color: #004efe;
       color: white;
-      margin-bottom: 10px;
+      padding-bottom: 10px;
       border-radius: 5px;
       max-width: 95%;
       width: 100px;

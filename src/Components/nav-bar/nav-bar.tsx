@@ -35,7 +35,7 @@ function NavBar(props:any) {
               to="about"
               spy={true} 
               smooth={true}
-              offset={0}
+              offset={-30}
               duration={700}
             >
               <Button variant="text">
@@ -75,9 +75,8 @@ function NavBar(props:any) {
                   to="contact"
                   spy={true} 
                   smooth={true}
-                  offset={20}
+                  offset={0}
                   duration={700}
-  
               >
                 <Button variant="text">
                   Contact

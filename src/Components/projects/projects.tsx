@@ -38,7 +38,7 @@ function Projects() {
   return (   
         <div
           className='container'
-    >
+        >
           <div className='spacer'>
           </div>
           <Slide direction="right" in={slideChecked} mountOnEnter unmountOnExit>
