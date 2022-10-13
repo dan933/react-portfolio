@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
+import { Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from '@mui/material'
 import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import './project-card.css';
