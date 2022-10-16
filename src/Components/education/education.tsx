@@ -8,7 +8,7 @@ function Education() {
 
   const dipOfITBulletPoint = [
     'Developed and deployed two full stack applications using Azure cloud services',
-    'Created a CICD pipelines for the project using Azure pipeline',
+    'Created a CICD pipelines for the project using Azure',
     'Collaborated with other developers using azure boards',
     'In the process of creating an admin dashboard for an organisation with DGI status',
     'Created a full stack application using React'].map((bullet,index) => (
@@ -82,8 +82,7 @@ function Education() {
               marginBottom={'3px'}
               color={'gray'}
             >
-              Unfortunately, this course was discontinued however I achieved the following: 
-
+              This course was discontinued however I achieved the following:
             </Typography>
             <ul>
               {associateDegreeBulletPoint}
