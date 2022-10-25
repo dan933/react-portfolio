@@ -1,7 +1,6 @@
 import React from 'react'
-import { AppBar, Box, Button, Divider, List, ListItem, ListItemButton, ListItemText, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, Button, Toolbar } from '@mui/material';
 import './nav-bar.css'
-import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-scroll';
 
 
@@ -28,11 +27,6 @@ function NavBar(props:any) {
           <Box
               sx={{ display: { xs: 'flex', sm: 'none', alignItems:'center' } }}
             >
-              <Button
-                onClick={props.openDrawer}
-              > 
-                <MenuIcon/>
-              </Button>
               <img src="./web-logo.png" alt="" style={{maxWidth:'4rem', padding:'8px'}} />
           </Box>
           <Box

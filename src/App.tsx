@@ -6,12 +6,9 @@ import Education from './Components/education/education';
 import { Box } from '@mui/material';
 import Contact from './Components/contact/contact';
 import NavBar from './Components/nav-bar/nav-bar';
-import {   Element } from 'react-scroll'
-import Drawer from './Components/nav-bar/drawer/drawer';
+import { Element } from 'react-scroll'
 
 function App() {
-
-  const [drawer, setDrawer] = React.useState(false)
 
   return (
     <Box
@@ -19,9 +16,8 @@ function App() {
       overflowX: 'hidden',
     }}
     >
-      <NavBar
-        openDrawer = {() => setDrawer(prev => !prev)}
-      />
+      <NavBar/>
+      
       <Element
         name="about"
       >
@@ -48,15 +44,6 @@ function App() {
       >        
         <Contact />
       </Element>
-
-
-      
-
-
-      <Drawer
-        drawer={drawer}
-        setDrawer={setDrawer}
-      />
     </Box>
 
   );
