@@ -7,7 +7,10 @@ function ProjectDialog(props: any) {
     const iframeStyle: CSSProperties = {
         overflow: 'auto',
         border: 'none',
-        marginBottom:'10px'
+        marginBottom:'10px',
+        height:'300px',
+        width:'100%'
+
       }
 
 
@@ -39,16 +42,22 @@ function ProjectDialog(props: any) {
         {props.card.subtitle}
       </DialogContentText>
           <Box
-            display={'flex'}
-            flexDirection={'column'}
-            width={'500px'}
-            justifyContent={'center'}
-            marginBottom={'10px'}
-            overflow={'auto'}
+            display='flex'
+            flexDirection='column'           
+            justifyContent='center'
+            alignItems='center'
+            marginBottom='10px'
+            overflow='auto'
           >
-            <iframe width={'500px'} height={'300px'} src={props.card.IsDemoButton ? props.card.demoURL : props.card.youtubeLink} title="NBA Application" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style={iframeStyle} allowFullScreen></iframe>  
+            <iframe
+              src={props.card.IsDemoButton ? props.card.demoURL : props.card.youtubeLink} 
+              title="NBA Application"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" style={iframeStyle} 
+            >
+            </iframe>  
             <DialogContentText
               color={'black'}
+              sx={{maxWidth:'60vw'}}
             >
             {props.card.description}
           </DialogContentText>
