@@ -1,6 +1,6 @@
 # Portfolio website
 
-It was created using React and material UI
+This site was created using React and material UI
 Google forms is integrated into the html contact form.
 
 Packages such as react-animation-on-scroll where used for the scroll animations
