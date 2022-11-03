@@ -21,8 +21,7 @@ function ProjectCard(props:any) {
             sx={{
               cursor:'pointer'
             }}
-            component = "img"
-            height="194"
+            component = "img"          
             onClick={props.handleDialog}
             image={`ProjectImages/${props.card.img}`}
             alt=""

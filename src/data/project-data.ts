@@ -2,6 +2,21 @@ import {IProjectCard } from "../Models/project-card-model";
 
 export const CardData: IProjectCard[] = [
   {
+    title: 'Image App',
+    subtitle: 'Stack: Angular and FireBase',
+    img: `image.gif`,
+    caption:
+      `You can upload images, create cards write captions, which then can be played as audio.
+      Multiple users can login and create their own cards.`,
+    gitHubLink: 'https://github.com/dan933/image-accessibility-project',
+    description: `An application created with Angular and Firebase. 
+    Allows users to create an account or login with google.
+    A user can upload images and edit card captions the captions can then be listened to as audio.`,
+    IsGitHubButton: true,
+    demoURL:'https://image-learn-app.web.app/',
+    IsDemoButton: true,
+  },
+  {
     title: 'NBA App',
     subtitle: 'Stack: React, Sql Server and Entity Framework',
     img: `nba.gif`,
