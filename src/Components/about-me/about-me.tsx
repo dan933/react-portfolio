@@ -18,7 +18,7 @@ function AboutMe() {
         <Box>
           <p>
             Hello 😊, my name is Daniel Albert I'm excited to show you some of the projects I have been working on.
-            I have worked with JavaScript frameworks such as React,
+            I have worked with JavaScript frameworks/libraries such as React,
             and Angular I have also created .Net and NodeJS APIs and integrated them into the front end.
           </p>
         </Box>
