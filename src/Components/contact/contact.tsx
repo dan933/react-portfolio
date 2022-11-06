@@ -1,6 +1,7 @@
 import React from 'react'
 import './contact.css'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { Button, TextField } from '@mui/material';
 
 function Contact() {  
 
@@ -19,10 +20,10 @@ function Contact() {
                       action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc18dF3ds8TMYPu5o0nHkIRut7_KltJ4dU9DJniihW0jjbNmg/formResponse"
                       method="post"
                       >
-                      <input type="email" required placeholder="Email" name="entry.1888783603" className={'message-box'} ></input>
-                      <textarea name="entry.287121295" required rows={15} placeholder="enter message" className={'message-box'} id=""></textarea>
+                      <TextField label="Email" variant="outlined" type="email" required name="entry.1888783603"></TextField>
+                      <TextField label="Message" multiline={true} minRows={3} variant="outlined" name="entry.287121295" required id=""/>
 
-                      <button type="submit" className="submit-button">Submit</button>
+                      <Button type="submit" variant="contained" className="submit-button">Submit</Button>
                       </form>
           </div>
       </div>
