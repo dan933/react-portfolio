@@ -53,8 +53,9 @@ export const CardData: IProjectCard[] = [
       I built this app to learn different technologies and how to create interactive maps.
       `,
     description: 'This application is designed to find the most profitable location for rideshare driving. Based on a drivers previous rideshare history. It reads an excel file with trip details. The income from each trip is grouped by day, time and suburb using an aggregate function. The longatude and latitude of each suburb is found by searching a csv file for a suburb match, in order for leaflet to use for markers. The markers are coloured using a colour pallet the darker the colour the more profitable the location at that time and date.',
-    demoURL:'https://daniel-albert.shinyapps.io/Rideshare-app/?_ga=2.69919888.120105246.1665634028-703680541.1665634028',
-    IsGitHubButton: false,
+    demoURL: 'https://daniel-albert.shinyapps.io/Rideshare-app/?_ga=2.69919888.120105246.1665634028-703680541.1665634028',
+    gitHubLink:'https://github.com/dan933/Rideshare-project',
+    IsGitHubButton: true,
     IsDemoButton: true,
   },
   // {
