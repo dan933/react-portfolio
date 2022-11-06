@@ -4,6 +4,20 @@
     row-gap: 5px;
 }
 
+.stack-section{
+    justify-content: center;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 15px;
+
+}
+
+.stack-img{
+    height: 100px;
+}
+
 @media only screen and (max-width: 319px) {
     .button-container {
         flex-direction: column;

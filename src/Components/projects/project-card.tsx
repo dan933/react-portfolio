@@ -45,9 +45,8 @@ function ProjectCard(props:any) {
           {
             props.card.IsDemoButton &&
             <Button
-                size="small"
                 sx={{
-                  backgroundColor: 'white',
+                  minWidth:'120px',
                   color: 'black',
                   marginLeft:'3px'
                 }}
@@ -64,15 +63,13 @@ function ProjectCard(props:any) {
           {
             !props.card.IsDemoButton &&
               <Button
-                  size="small"
                   sx={{
-                    backgroundColor: 'white',
                     color: 'black',
-                    marginLeft:'3px'
+                    marginLeft: '3px',
+                    minWidth:'120px'
                   }}
                   variant="outlined"
                   onClick={props.handleDialog}
-                  
               >
                   Video
               </Button>
@@ -82,7 +79,7 @@ function ProjectCard(props:any) {
 
 
             {props.card.IsGitHubButton &&
-              <Button size="small"
+              <Button size="medium"
                 sx={{
                   backgroundColor: 'white',
                   color: 'black',
