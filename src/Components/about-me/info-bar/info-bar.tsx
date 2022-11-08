@@ -7,47 +7,37 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function InfoBar() {
   return (
-    <>
-      <Box
-        className='button-container'
+    <Box
+      className='button-container'
+    >
+      <Button
+        className='buttons'
+        variant="outlined"
+        href='CV-Daniel-Albert.pdf'
+        download={'CV-Daniel-Albert.pdf'}
       >
-        <Button
-          className='buttons'
-          variant="outlined"
-          href='CV-Daniel-Albert.pdf'
-          download={'CV-Daniel-Albert.pdf'}
-        >
-          <DownloadIcon
-            sx={{marginRight:'3px'}}
-          /> CV
-        </Button>
-        <Button
-          className='buttons'
-          variant="outlined"
-          href="mailto:danielalbert3377@gmail.com"
-        >
-          <EmailIcon
+        <DownloadIcon
           sx={{marginRight:'3px'}}
-          /> Email
-        </Button>
-        <Button
-          className='buttons'
-          variant="outlined"
-          href='https://github.com/dan933'
-          target="blank"
-        >
-          <GitHubIcon/> GitHub
-        </Button>
-      </Box>
-      <Box
-        className='stack-section'
+        /> CV
+      </Button>
+      <Button
+        className='buttons'
+        variant="outlined"
+        href="mailto:danielalbert3377@gmail.com"
       >
-        <img src="/stack-images/react-icon.png" className='stack-img'  alt="" />
-        <img src="/stack-images/angular-icon.png" className='stack-img'  alt="" />
-      </Box>
-
-    </>
- 
+        <EmailIcon
+        sx={{marginRight:'3px'}}
+        /> Email
+      </Button>
+      <Button
+        className='buttons'
+        variant="outlined"
+        href='https://github.com/dan933'
+        target="blank"
+      >
+        <GitHubIcon/> GitHub
+      </Button>
+    </Box> 
   )
 }
 
