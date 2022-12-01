@@ -33,7 +33,7 @@ export const CardData: IProjectCard[] = [
       `
       Allows users to create an account or login with google.
       A user can upload images and edit card captions the captions can then be listened to as audio.
-      I built this app as a learning tool for a friend's child that was living with autism.
+      I built this app as a learning tool for a friend's child that is living with autism.
       `,
     gitHubLink: 'https://github.com/dan933/image-accessibility-project',
     description: `An application created with Angular and Firebase. 
