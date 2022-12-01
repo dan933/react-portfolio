@@ -1,4 +1,4 @@
-import { Box, Paper, Slide } from '@mui/material'
+import { Box, Paper } from '@mui/material'
 import { Typography } from '@mui/material';
 import React from 'react';
 import './education.css';
@@ -19,7 +19,6 @@ function Education() {
   )
   
   const associateDegreeBulletPoint = [
-    '4.0 GPA',
     'Developed and deployed two fullstack applications using AWS cloud services',
     'Utilised Jira project management software',
     'Collaborated with other developers on GitHub'
@@ -57,7 +56,7 @@ function Education() {
             <Typography
               marginBottom={'3px'}
             >Swinburne University of Technology</Typography>
-              <Typography>2022 – In progress</Typography>
+              <Typography>01/03/2022 – 02/12/2022</Typography>
             </Box>
             <ul>
               {dipOfITBulletPoint}
@@ -76,7 +75,7 @@ function Education() {
               <Typography
                 marginBottom={'3px'}
               >Swinburne University of Technology</Typography>
-                <Typography>2020 - 2021</Typography>
+                <Typography>01/03/2021 - 30/11/2021</Typography>
             </Box>
             <Typography
               marginBottom={'3px'}
@@ -87,22 +86,6 @@ function Education() {
             <ul>
               {associateDegreeBulletPoint}
           </ul>
-          <Typography
-            sx={{
-              fontSize:'1rem',
-              fontWeight:'bold'
-            }}
-            >
-              Diploma of Accounting 
-          </Typography>
-          <Box
-          className='subheading'
-          >
-          <Typography
-            sx={{marginBottom:'10px'}}
-          >Swinburne University of Technology</Typography>
-            <Typography>2020</Typography>
-          </Box>
         </Paper>
       </div>
 
