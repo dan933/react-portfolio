@@ -3,7 +3,6 @@ import React from 'react';
 import TabsSection from './tabs-section/tabs-section';
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-
 function Projects() {  
   return (
     <AnimationOnScroll animateIn="animate__fadeInLeft">

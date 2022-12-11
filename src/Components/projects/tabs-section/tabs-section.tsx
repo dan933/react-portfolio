@@ -1,6 +1,7 @@
 import { Box, Tab, Tabs } from '@mui/material';
 import React from 'react'
 import { CardData } from '../../../data/project-data';
+import { IProjectCard } from '../../../Models/project-card-model';
 import ProjectCard from '../project-card';
 import ProjectDialog from '../project-dialog/project-dialog';
 
@@ -24,8 +25,22 @@ function TabsSection(props:any) {
   
   const [openDialog, setOpenDialog] = React.useState(false)
   
-  const handleDialog = () => {
-      setOpenDialog(prev => !prev)
+  const handleDialog = (event:Event, card:IProjectCard) => {
+      console.log(card.IsDemoButton);
+      //if the card has a demo
+      if(card.IsDemoButton){
+        
+        //open demo link in new tab
+        window.open(card.demoURL);
+
+        
+      }else{
+
+        //set dialog box value
+        setOpenDialog(prev => !prev)
+       
+      }
+
     }
     
     function TabPanel(props: TabPanelProps) {
@@ -56,7 +71,7 @@ function TabsSection(props:any) {
     
         <TabPanel tabValue={tabValue} key={index} index={index}>
           <ProjectCard
-            handleDialog= {handleDialog}
+            handleDialog= {(event:Event) => handleDialog(event,card)}
             key={index}
             card={card}
           />
@@ -64,7 +79,7 @@ function TabsSection(props:any) {
           {!card.IsDemoButton &&
             <ProjectDialog
               card={card}
-              handleDialog= {handleDialog}
+              handleDialog= {(event:Event) => handleDialog(event,card)}
               openDialog= {openDialog}
             />
           }
