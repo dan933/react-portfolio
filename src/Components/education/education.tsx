@@ -27,11 +27,11 @@ function Education() {
 
   return (
     <AnimationOnScroll animateIn="animate__fadeInLeft">
+      <div className='spacer'>
+      </div>
       <div
         className='education-container'
       >
-        <div className='spacer'>
-        </div>
         <Paper
         elevation={3}
         className='education-paper'
