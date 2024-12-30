@@ -19,7 +19,8 @@ function AboutMe() {
           <p>
             Hello 😊, my name is Daniel Albert I'm excited to show you some of the projects I have been working on.
             I have worked with JavaScript frameworks/libraries such as React,
-            and Angular I have also created .Net and NodeJS APIs and integrated them into the front end.
+            and Angular. I have created .Net and NodeJS APIs and integrated them into various frontends.
+            I am profeicient in aws services such as SQS, Lambda and Serverless.
           </p>
         </Box>
       </Box>
