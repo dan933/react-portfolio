@@ -12,9 +12,10 @@ function InfoBar() {
     const [snackMessage, setSnackMessage] = useState("");
     const [snackType, setSnackType] = useState<"success" | "error">("success");
 
-  const copyEmail = async () =>{
+  const emailShare = async (e:React.MouseEvent<HTMLButtonElement>) =>{
+    e?.preventDefault?.();
     try {
-      navigator?.clipboard?.writeText?.("danielalbert3377@gmail.com")
+     await navigator?.clipboard?.writeText?.("danielalbert3377@gmail.com")
   
       setSnackMessage("Email copied to clipboard.")
       setSnackType("success")
@@ -22,7 +23,11 @@ function InfoBar() {
       
     } catch (error) {
       
+    }finally{
+      window.location.href = "mailto:danielalbert3377@gmail.com"
+
     }
+
   }
 
   return (
@@ -43,7 +48,7 @@ function InfoBar() {
       <Button
         className='buttons'
         variant="outlined"
-        onClick={() => copyEmail()}
+        onClick={(e) => emailShare(e)}
       >
         <EmailIcon
         sx={{marginRight:'3px'}}
