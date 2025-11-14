@@ -13,15 +13,31 @@ function AboutMe() {
     >
       <div className='spacer'></div>
 
-      <img id='profile-picture' src="./profile-picture.png" alt="" />
+      <img id='profile-picture' src="./profile-picture.png" alt=""
+      />
       <Box id='profile-card'>
-        <Box>
+        <Box
+        sx={{ px: 3 }}
+        >
           <p>
-            Hello 😊, my name is Daniel Albert I'm excited to show you some of the projects I have been working on.
-            I have worked with JavaScript frameworks/libraries such as React,
-            and Angular. I have created .Net and NodeJS APIs and integrated them into various frontends.
-            I am profeicient in aws services such as SQS, Lambda and Serverless.
-          </p>
+            Hello 😊, my name is Daniel Albert,
+            I've been working as a software developer for 3 years and have been developing hobby projects for 5 years.
+            </p>
+            <p>
+              I've created several key features in a sports payment application both the dashboard and the app,
+              the app is used Australia wide by over 20,000 plus users.
+              The application has been downloaded over 50,000 plus downloads on the android play store.
+            </p>
+            <p>
+              Some key features I developed and deployed across multiple applications include:
+            </p>
+                         <ul>
+                <li>Game day payment reminders</li>
+                <li>Batch payment process for basketball organisations stripe integration and direct debits</li>
+                <li>Archiving and summarising documents using AWS SQS, lambda and MongoDb</li>
+                <li>Dulux Acratex App Personalisation google api integration (weather, places)</li>
+                <li>Dulux Translation feature</li>
+              </ul>
         </Box>
       </Box>
       <InfoBar />

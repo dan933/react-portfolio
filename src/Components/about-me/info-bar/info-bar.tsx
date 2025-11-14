@@ -5,12 +5,17 @@ import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CloseIcon from '@mui/icons-material/Close';
+import { StackOverflowIcon } from '../../../Icons/reactIcons';
+
 
 function InfoBar() {
 
     const [openSnack, setOpenSnack] = useState(false);
     const [snackMessage, setSnackMessage] = useState("");
     const [snackType, setSnackType] = useState<"success" | "error">("success");
+
+
+
 
   const emailShare = async (e:React.MouseEvent<HTMLButtonElement>) =>{
     e?.preventDefault?.();
@@ -38,11 +43,11 @@ function InfoBar() {
       <Button
         className='buttons'
         variant="outlined"
-        href='CV-Daniel-Albert.pdf'
-        download={'CV-Daniel-Albert.pdf'}
+        href='CV-Daniel-Albert-Public.pdf'
+        download={'CV-Daniel-Albert-Public.pdf'}
       >
         <DownloadIcon
-          sx={{marginRight:'3px'}}
+          sx={{right:'5px', position: 'relative'}}
         /> CV
       </Button>
       <Button
@@ -51,7 +56,7 @@ function InfoBar() {
         onClick={(e) => emailShare(e)}
       >
         <EmailIcon
-        sx={{marginRight:'3px'}}
+        sx={{right:'5px', position: 'relative'}}
         /> Email
       </Button>
       <Button
@@ -60,7 +65,19 @@ function InfoBar() {
         href='https://github.com/dan933'
         target="blank"
       >
-        <GitHubIcon/> GitHub
+        <GitHubIcon
+        sx={{right:'5px', position: 'relative'}}
+        /> GitHub
+      </Button>
+      <Button
+        className='buttons'
+        variant="outlined"
+        href='https://stackoverflow.com/users/13833050/daniel-albert'
+        target="blank"
+      >
+        <StackOverflowIcon
+        style={{marginRight:'5px'}}
+        /> Stack Overflow
       </Button>
     </Box>
     <Snackbar
