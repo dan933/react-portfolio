@@ -26,12 +26,12 @@ function AboutMe() {
             <p>
               I've created several key features in a sports payment application both the dashboard and the app,
               the app is used Australia wide by over 20,000 plus users.
-              The application has been downloaded over 50,000 plus downloads on the android play store.
+              The application has over 50,000 plus downloads on the android play store.
             </p>
             <p>
               Some key features I developed and deployed across multiple applications include:
             </p>
-                         <ul>
+              <ul>
                 <li>Game day payment reminders</li>
                 <li>Batch payment process for basketball organisations stripe integration and direct debits</li>
                 <li>Archiving and summarising documents using AWS SQS, lambda and MongoDb</li>
